@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Playwright Tests
 
 on:
   workflow_dispatch:
