@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 //npx playwright test tests/14placeorder.spec.js --config playwright.config2.js --project=FX
 
-const dataset = JSON.parse(JSON.stringify(require('../tests/placeorder.json')));
+const dataset = JSON.parse(JSON.stringify(require('../github-actions-practice/placeorder.json')));
 
 
 test('@Webst Client App login', async ({ page }) => {
