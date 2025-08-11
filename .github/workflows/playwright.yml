@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -17,5 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Playwright tests
-        run: npm run test2
+      - name: Install Playwright browsers
+        run: npx playwright install
+
+      - name: Run bankMain.spec.js only
+        run: npx playwright test github-actions-practice/bankMain.spec.js --project=chromium
